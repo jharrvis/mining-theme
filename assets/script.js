@@ -9,6 +9,11 @@ const dropdownToggles = document.querySelectorAll(".site-nav__toggle");
 const newswireTrack = document.querySelector(".newswire__track");
 const newswirePrev = document.querySelector(".newswire__arrow--prev");
 const newswireNext = document.querySelector(".newswire__arrow--next");
+const worldHotspots = document.querySelectorAll(".world-map__hotspot");
+const worldPopup = document.querySelector(".world-popup");
+const worldPopupFlag = document.querySelector(".world-popup__flag");
+const worldPopupTitle = document.querySelector(".world-popup__title");
+const worldPopupCommodities = document.querySelector(".world-popup__commodities");
 
 if (closeBreakingButton && breakingBar) {
   closeBreakingButton.addEventListener("click", () => {
@@ -132,4 +137,38 @@ if (window.Chart && tickerCharts.length > 0) {
       },
     });
   });
+}
+
+if (
+  worldHotspots.length > 0 &&
+  worldPopup &&
+  worldPopupFlag &&
+  worldPopupTitle &&
+  worldPopupCommodities
+) {
+  const setActiveHotspot = (hotspot) => {
+    worldHotspots.forEach((button) => button.classList.remove("is-active"));
+    hotspot.classList.add("is-active");
+
+    const country = hotspot.dataset.country || "";
+    const flag = hotspot.dataset.flag || "";
+    const commodities = hotspot.dataset.commodities || "";
+    const popupX = hotspot.dataset.popupX || "69%";
+    const popupY = hotspot.dataset.popupY || "66%";
+
+    worldPopup.style.left = popupX;
+    worldPopup.style.top = popupY;
+    worldPopupTitle.textContent = country;
+    worldPopupCommodities.textContent = commodities;
+    worldPopupFlag.src = flag;
+    worldPopupFlag.alt = `${country} flag`;
+  };
+
+  worldHotspots.forEach((hotspot) => {
+    hotspot.addEventListener("click", () => {
+      setActiveHotspot(hotspot);
+    });
+  });
+
+  setActiveHotspot(worldHotspots[0]);
 }
