@@ -14,6 +14,7 @@ const worldPopup = document.querySelector(".world-popup");
 const worldPopupFlag = document.querySelector(".world-popup__flag");
 const worldPopupTitle = document.querySelector(".world-popup__title");
 const worldPopupCommodities = document.querySelector(".world-popup__commodities");
+const faqItems = document.querySelectorAll(".faq-item");
 
 if (closeBreakingButton && breakingBar) {
   closeBreakingButton.addEventListener("click", () => {
@@ -171,4 +172,28 @@ if (
   });
 
   setActiveHotspot(worldHotspots[0]);
+}
+
+if (faqItems.length > 0) {
+  faqItems.forEach((item) => {
+    const button = item.querySelector(".faq-item__button");
+
+    if (!button) {
+      return;
+    }
+
+    button.addEventListener("click", () => {
+      const isOpen = item.classList.contains("is-open");
+
+      faqItems.forEach((faq) => {
+        faq.classList.remove("is-open");
+        faq.querySelector(".faq-item__button")?.setAttribute("aria-expanded", "false");
+      });
+
+      if (!isOpen) {
+        item.classList.add("is-open");
+        button.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
 }
