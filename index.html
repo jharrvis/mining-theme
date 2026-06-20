@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mining Layout Replica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="demo-block demo-block--ad" aria-labelledby="ad-title">
+      <div class="ad-slot">
+        <div class="ad-slot__content">
+          <h1 id="ad-title" class="ad-slot__title">ADVERTISE WITH US</h1>
+          <p class="ad-slot__copy">Real-time market data, expert insights and global coverage.</p>
+          <a class="ad-slot__cta" href="#navigation-demo">LEARN MORE</a>
+        </div>
+        <p class="ad-slot__label" aria-label="Ad label">AD Parallax</p>
+      </div>
+    </section>
+
+    <section id="navigation-demo" class="demo-block demo-block--nav" aria-label="Mining top navigation demo">
+      <aside class="breaking-bar" aria-label="Breaking news">
+        <div class="breaking-bar__inner">
+          <div class="breaking-bar__headline">
+            <span class="breaking-bar__tag">BREAKING</span>
+            <div class="breaking-bar__meta">
+              <p class="breaking-bar__text">Amazon to buy Globalstar to bolster Leo satellite business</p>
+              <span class="breaking-bar__dot" aria-hidden="true"></span>
+              <span class="breaking-bar__time">15 minutes ago</span>
+            </div>
+          </div>
+          <button class="breaking-bar__close" type="button" aria-label="Close breaking news">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </aside>
+
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="site-logo" href="#" aria-label="Mining home">
+            <img src="assets/img/Logo%20container.png" alt="Mining.com.au logo">
+          </a>
+
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+
+          <nav id="site-nav" class="site-nav" aria-label="Primary">
+            <ul class="site-nav__list">
+              <li><a class="site-nav__link site-nav__link--active" href="#">HOME</a></li>
+              <li class="site-nav__item site-nav__item--has-dropdown">
+                <button class="site-nav__link site-nav__toggle" type="button" aria-expanded="false">COMMODITIES</button>
+                <ul class="site-dropdown" aria-label="Commodities submenu">
+                  <li><a class="site-dropdown__link" href="#">Gold</a></li>
+                  <li><a class="site-dropdown__link" href="#">Copper</a></li>
+                  <li><a class="site-dropdown__link" href="#">Lithium</a></li>
+                </ul>
+              </li>
+              <li class="site-nav__item site-nav__item--has-dropdown">
+                <button class="site-nav__link site-nav__toggle" type="button" aria-expanded="false">REGIONS</button>
+                <ul class="site-dropdown" aria-label="Regions submenu">
+                  <li><a class="site-dropdown__link" href="#">Australia</a></li>
+                  <li><a class="site-dropdown__link" href="#">Asia Pacific</a></li>
+                  <li><a class="site-dropdown__link" href="#">North America</a></li>
+                </ul>
+              </li>
+              <li><a class="site-nav__link" href="#">EVENTS</a></li>
+              <li><a class="site-nav__link" href="#">VIDEO</a></li>
+              <li><a class="site-nav__link" href="#">WATCHLIST</a></li>
+              <li class="site-nav__item site-nav__item--has-dropdown">
+                <button class="site-nav__link site-nav__toggle" type="button" aria-expanded="false">VIEW MORE</button>
+                <ul class="site-dropdown" aria-label="View more submenu">
+                  <li><a class="site-dropdown__link" href="#">Opinion</a></li>
+                  <li><a class="site-dropdown__link" href="#">Analysis</a></li>
+                  <li><a class="site-dropdown__link" href="#">Podcasts</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="site-header__actions">
+            <button class="icon-button icon-button--search" type="button" aria-label="Open search" aria-expanded="false" aria-controls="site-search">
+              <span class="search-icon"></span>
+            </button>
+            <a class="sign-in-btn" href="#">SIGN IN</a>
+          </div>
+        </div>
+
+        <form id="site-search" class="search-panel" role="search">
+          <label class="sr-only" for="search-field">Search</label>
+          <input id="search-field" class="search-panel__input" type="search" name="q" placeholder="Search mining news, commodities, regions">
+          <button class="search-panel__submit" type="submit">Search</button>
+        </form>
+      </header>
+
+      <section class="ticker-strip" aria-label="Market ticker">
+        <div class="ticker-strip__viewport">
+          <div class="ticker-strip__track">
+            <article class="ticker-card">
+              <span class="ticker-card__symbol">RIO.AX 118.32</span>
+              <span class="ticker-card__trend ticker-card__trend--up">+1.54%</span>
+            </article>
+            <article class="ticker-card">
+              <span class="ticker-card__symbol">RIO.AX 118.32</span>
+              <span class="ticker-card__trend ticker-card__trend--down">-0.77%</span>
+            </article>
+            <article class="ticker-card">
+              <span class="ticker-card__symbol">RIO.AX 118.32</span>
+              <span class="ticker-card__trend ticker-card__trend--up">+1.54%</span>
+            </article>
+            <article class="ticker-card">
+              <span class="ticker-card__symbol">RIO.AX 118.32</span>
+              <span class="ticker-card__trend ticker-card__trend--down">-0.77%</span>
+            </article>
+            <article class="ticker-card">
+              <span class="ticker-card__symbol">RIO.AX 118.32</span>
+              <span class="ticker-card__trend ticker-card__trend--up">+1.54%</span>
+            </article>
+            <article class="ticker-card">
+              <span class="ticker-card__symbol">RIO.AX 118.32</span>
+              <span class="ticker-card__trend ticker-card__trend--down">-0.77%</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="newswire" aria-label="Newswire highlights">
+        <div class="newswire__inner">
+          <div class="newswire__brand" aria-label="MDF Global">
+            <img src="assets/img/MDF%20LOGO.png" alt="MDF Global">
+          </div>
+          <button class="newswire__arrow newswire__arrow--prev" type="button" aria-label="Previous news">
+            <span></span>
+          </button>
+          <div class="newswire__viewport">
+            <div class="newswire__track">
+              <article class="news-card">
+                <p class="news-card__title news-card__title--muted">$2.6 million raise fuels American Uranium's grow...</p>
+                <p class="news-card__meta"><span class="news-card__topic">Gold</span><span class="news-card__dot"></span><time datetime="2026-09-29">Sep 29, 2026</time></p>
+              </article>
+              <article class="news-card">
+                <p class="news-card__title">$2.6 million raise fuels American Uranium's grow...</p>
+                <p class="news-card__meta"><span class="news-card__topic">Gold</span><span class="news-card__dot"></span><time datetime="2026-09-29">Sep 29, 2026</time></p>
+              </article>
+              <article class="news-card">
+                <p class="news-card__title"><span class="news-card__tag">Exclusive</span>$2.6 million raise fuels American Uranium's...</p>
+                <p class="news-card__meta"><span class="news-card__topic">Gold</span><span class="news-card__dot"></span><time datetime="2026-09-29">Sep 29, 2026</time></p>
+              </article>
+              <article class="news-card">
+                <p class="news-card__title">$2.6 million raise fuels American Uranium's grow...</p>
+                <p class="news-card__meta"><span class="news-card__topic">Gold</span><span class="news-card__dot"></span><time datetime="2026-09-29">Sep 29, 2026</time></p>
+              </article>
+              <article class="news-card">
+                <p class="news-card__title"><span class="news-card__tag">Exclusive</span>$2.6 million raise fuels American Uranium's...</p>
+                <p class="news-card__meta"><span class="news-card__topic">Gold</span><span class="news-card__dot"></span><time datetime="2026-09-29">Sep 29, 2026</time></p>
+              </article>
+            </div>
+          </div>
+          <button class="newswire__arrow newswire__arrow--next" type="button" aria-label="Next news">
+            <span></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="editorial-hub" aria-labelledby="editorial-title">
+        <div class="editorial-hub__inner">
+          <header class="editorial-hub__header">
+            <h2 id="editorial-title" class="editorial-hub__title">PROVIDING GLOBAL MINING INFORMATION</h2>
+            <div class="editorial-hub__filters" aria-label="Content filters">
+              <button class="filter-icon" type="button" aria-label="Open filter options">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <button class="filter-chip filter-chip--active" type="button">All</button>
+              <button class="filter-chip" type="button">Market Updates</button>
+              <button class="filter-chip" type="button">Interviews</button>
+              <button class="filter-chip" type="button">Critical Minerals</button>
+              <button class="filter-chip" type="button">Energy Transition</button>
+              <button class="filter-chip" type="button">Gold</button>
+              <button class="filter-chip" type="button">Copper</button>
+              <button class="filter-chip" type="button">ESG</button>
+              <button class="filter-chip" type="button">Uranium</button>
+              <button class="filter-chip filter-chip--dropdown" type="button">More</button>
+            </div>
+          </header>
+
+          <div class="editorial-hub__top">
+            <aside class="most-read" aria-labelledby="most-read-title">
+              <div class="section-heading">
+                <h3 id="most-read-title" class="section-heading__title">MOST READ</h3>
+                <span class="section-heading__badge">TODAY</span>
+              </div>
+              <ol class="ranked-list">
+                <li class="ranked-list__item"><span class="ranked-list__number">01</span><a href="#">BHP flags major copper expansion as demand from AI a...</a></li>
+                <li class="ranked-list__item"><span class="ranked-list__number">02</span><a href="#">BHP flags major copper expansion as demand from AI a...</a></li>
+                <li class="ranked-list__item"><span class="ranked-list__number">03</span><a href="#">BHP flags major copper expansion as demand from AI a...</a></li>
+                <li class="ranked-list__item"><span class="ranked-list__number">04</span><a href="#">BHP flags major copper expansion as demand from AI a...</a></li>
+                <li class="ranked-list__item"><span class="ranked-list__number">05</span><a href="#">BHP flags major copper expansion as demand from AI a...</a></li>
+                <li class="ranked-list__item ranked-list__item--muted"><span class="ranked-list__number">06</span><a href="#">BHP flags major copper expansion as demand from AI a...</a></li>
+              </ol>
+              <a class="section-link" href="#">View All</a>
+            </aside>
+
+            <section class="hero-story" aria-label="Featured stories">
+              <article class="hero-story__main">
+                <img src="assets/img/22b55814367d814fc777023a092231ac7f7dad42.png" alt="Workers in protective gear at a mining facility">
+                <div class="story-meta">
+                  <span class="story-tag">Gold</span>
+                  <span class="story-time">2 hours ago</span>
+                </div>
+                <h3 class="hero-story__headline">The Future of Critical Minerals Supply Chains</h3>
+                <p class="hero-story__summary">How new investments and supply diversification and reshaping the global minerals landscape</p>
+              </article>
+
+              <div class="hero-story__side">
+                <article class="story-card story-card--vertical">
+                  <img src="assets/img/42637b7b3e3a8d067eb59923758ffe9210e23be6.png" alt="Drilling operation in a mining field">
+                  <div class="story-meta">
+                    <span class="story-tag">Gold</span>
+                    <span class="story-time">2 hours ago</span>
+                  </div>
+                  <h3 class="story-card__title">Copper crunch looms as global demand out...</h3>
+                </article>
+
+                <article class="story-card story-card--vertical">
+                  <img src="assets/img/42637b7b3e3a8d067eb59923758ffe9210e23be6.png" alt="Drilling operation in a mining field">
+                  <div class="story-meta">
+                    <span class="story-tag">Gold</span>
+                    <span class="story-time">2 hours ago</span>
+                  </div>
+                  <h3 class="story-card__title">Copper crunch looms as global demand out...</h3>
+                </article>
+              </div>
+            </section>
+
+            <aside class="latest-news" aria-labelledby="latest-news-title">
+              <div class="section-heading">
+                <h3 id="latest-news-title" class="section-heading__title">LATEST NEWS</h3>
+                <span class="section-heading__live">LIVE</span>
+              </div>
+              <ul class="timeline-list">
+                <li class="timeline-list__item"><span class="timeline-list__time">32m</span><a href="#">BHP flags major copper expansion as demand from AI...</a></li>
+                <li class="timeline-list__item"><span class="timeline-list__time">50m</span><a href="#">BHP flags major copper expansion as demand from AI...</a></li>
+                <li class="timeline-list__item"><span class="timeline-list__time">1h</span><a href="#">BHP flags major copper expansion as demand from AI...</a></li>
+                <li class="timeline-list__item"><span class="timeline-list__time">2h</span><a href="#">BHP flags major copper expansion as demand from AI...</a></li>
+                <li class="timeline-list__item"><span class="timeline-list__time">3h</span><a href="#">BHP flags major copper expansion as demand from AI...</a></li>
+                <li class="timeline-list__item timeline-list__item--muted"><span class="timeline-list__time">4h</span><a href="#">BHP flags major copper expansion as demand from AI...</a></li>
+              </ul>
+              <a class="section-link" href="#">View All</a>
+            </aside>
+          </div>
+
+          <div class="editorial-hub__bottom">
+            <section class="mini-section" aria-labelledby="more-stories-title">
+              <div class="section-heading section-heading--link">
+                <h3 id="more-stories-title" class="section-heading__title">MORE STORIES</h3>
+                <a class="section-link section-link--inline" href="#">View All</a>
+              </div>
+              <div class="stack-list">
+                <article class="stack-card">
+                  <img src="assets/img/16_9.jpg" alt="Drilling machinery in rocky terrain">
+                  <div class="stack-card__body">
+                    <div class="story-meta"><span class="story-tag">Gold</span><span class="story-time">2 hours ago</span></div>
+                    <h4>Drilling begins at Hammer Metals’ Kalman Project</h4>
+                  </div>
+                </article>
+                <article class="stack-card">
+                  <img src="assets/img/16_9 (1).jpg" alt="Aerial view of drilling site">
+                  <div class="stack-card__body">
+                    <div class="story-meta"><span class="story-tag">Gold</span><span class="story-time">2 hours ago</span></div>
+                    <h4>Ausenco-led study to deliver comprehensive ou...</h4>
+                  </div>
+                </article>
+                <article class="stack-card">
+                  <img src="assets/img/16_9 (2).jpg" alt="Close-up of industrial drilling equipment">
+                  <div class="stack-card__body">
+                    <div class="story-meta"><span class="story-tag">Gold</span><span class="story-time">2 hours ago</span></div>
+                    <h4>Rapid Critical Metals expands silver footprint ...</h4>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="mini-section" aria-labelledby="videos-title">
+              <div class="section-heading section-heading--link">
+                <h3 id="videos-title" class="section-heading__title">VIDEOS</h3>
+                <a class="section-link section-link--inline" href="#">View All</a>
+              </div>
+              <div class="stack-list">
+                <article class="stack-card">
+                  <div class="media-card media-card--video">
+                    <img src="assets/img/36da6c78e832df602eb2d7b4e18c3d98bd71ea4c.png" alt="Off-road vehicle on remote timber road">
+                    <span class="media-card__play"></span>
+                    <span class="media-card__duration">12:07</span>
+                  </div>
+                  <div class="stack-card__body">
+                    <div class="story-meta"><span class="story-tag">Gold</span><span class="story-time">2 hours ago</span></div>
+                    <h4>Lodestar unpacks drilling and discovery across t...</h4>
+                  </div>
+                </article>
+                <article class="stack-card">
+                  <div class="media-card media-card--video">
+                    <img src="assets/img/36da6c78e832df602eb2d7b4e18c3d98bd71ea4c.png" alt="Off-road vehicle on remote timber road">
+                    <span class="media-card__play"></span>
+                    <span class="media-card__duration">12:07</span>
+                  </div>
+                  <div class="stack-card__body">
+                    <div class="story-meta"><span class="story-tag">Gold</span><span class="story-time">2 hours ago</span></div>
+                    <h4>Lodestar unpacks drilling and discovery across t...</h4>
+                  </div>
+                </article>
+                <article class="stack-card">
+                  <div class="media-card media-card--video">
+                    <img src="assets/img/36da6c78e832df602eb2d7b4e18c3d98bd71ea4c.png" alt="Off-road vehicle on remote timber road">
+                    <span class="media-card__play"></span>
+                    <span class="media-card__duration">12:07</span>
+                  </div>
+                  <div class="stack-card__body">
+                    <div class="story-meta"><span class="story-tag">Gold</span><span class="story-time">2 hours ago</span></div>
+                    <h4>Lodestar unpacks drilling and discovery across t...</h4>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="mini-section" aria-labelledby="podcasts-title">
+              <div class="section-heading section-heading--link">
+                <h3 id="podcasts-title" class="section-heading__title">PODCASTS</h3>
+                <a class="section-link section-link--inline" href="#">View All</a>
+              </div>
+              <div class="stack-list">
+                <article class="stack-card">
+                  <img src="assets/img/029336aeee85cfd5ca992b0bc4f37b141faacdbc.png" alt="Mining podcast microphone graphic">
+                  <div class="stack-card__body">
+                    <div class="story-meta"><span class="story-tag">Gold</span><span class="story-time">2 hours ago</span></div>
+                    <h4>Lodestar unpacks drilling discovery across three conti...</h4>
+                  </div>
+                </article>
+                <article class="stack-card">
+                  <img src="assets/img/029336aeee85cfd5ca992b0bc4f37b141faacdbc.png" alt="Mining podcast microphone graphic">
+                  <div class="stack-card__body">
+                    <div class="story-meta"><span class="story-tag">Gold</span><span class="story-time">2 hours ago</span></div>
+                    <h4>Lodestar unpacks drilling discovery across three conti...</h4>
+                  </div>
+                </article>
+                <article class="stack-card">
+                  <img src="assets/img/029336aeee85cfd5ca992b0bc4f37b141faacdbc.png" alt="Mining podcast microphone graphic">
+                  <div class="stack-card__body">
+                    <div class="story-meta"><span class="story-tag">Gold</span><span class="story-time">2 hours ago</span></div>
+                    <h4>Lodestar unpacks drilling discovery across three conti...</h4>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <aside class="sidebar-ad" aria-label="Advertisement">
+              <img src="assets/img/20.jpg" alt="Mining advertisement with helmeted worker">
+            </aside>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
