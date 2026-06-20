@@ -82,3 +82,54 @@ if (newswireTrack && newswirePrev && newswireNext) {
     newswireTrack.scrollBy({ left: scrollAmount, behavior: "smooth" });
   });
 }
+
+const tickerCharts = document.querySelectorAll(".ticker-card__chart");
+
+if (window.Chart && tickerCharts.length > 0) {
+  tickerCharts.forEach((canvas) => {
+    const points = (canvas.dataset.points || "")
+      .split(",")
+      .map((value) => Number(value.trim()))
+      .filter((value) => Number.isFinite(value));
+
+    if (points.length === 0) {
+      return;
+    }
+
+    const lineColor = canvas.dataset.lineColor || "#39d48d";
+    const fillColor = canvas.dataset.fillColor || "rgba(57,212,141,0.18)";
+
+    new Chart(canvas, {
+      type: "line",
+      data: {
+        labels: points.map((_, index) => index + 1),
+        datasets: [
+          {
+            data: points,
+            borderColor: lineColor,
+            backgroundColor: fillColor,
+            borderWidth: 1.8,
+            fill: true,
+            tension: 0.35,
+            pointRadius: 0,
+          },
+        ],
+      },
+      options: {
+        responsive: false,
+        animation: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { enabled: false },
+        },
+        scales: {
+          x: { display: false },
+          y: { display: false },
+        },
+        elements: {
+          line: { capBezierPoints: true },
+        },
+      },
+    });
+  });
+}
